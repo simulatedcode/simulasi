@@ -102,18 +102,22 @@ export default {
     <div class="py-8 bg-purple-100 h-screen">
       <div class="max-w-7xl mx-auto px-5">
         <h1 class="text-3xl font-bold">Recent posts</h1>
-        <div class="py-12">
+        <div class="mt-8">
           <div class="posts">
             <div class="loading" v-if="loading">Loading...</div>
             <div v-if="error" class="error">
               {{ error }}
             </div>
-            <div class="container-lg text-lg font-semibold">
-              <div v-for="post in posts" class="post-item" :key="post._id">
+            <div class="container-lg space-y-6">
+              <div
+                v-for="post in posts"
+                class="border-b border-b-purple-200 pb-6"
+                :key="post._id"
+              >
                 <router-link :to="`/opensources/${post.slug.current}`">
-                  <h2>{{ post.title }}</h2>
+                  <h2 class="text-lg font-semibold mt-4">{{ post.title }}</h2>
                 </router-link>
-                <p>{{ post.excerpt }}</p>
+                <p class="text-xs max-w-sm">{{ post.excerpt }}</p>
               </div>
             </div>
           </div>

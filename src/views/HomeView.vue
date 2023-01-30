@@ -2,7 +2,7 @@
 import HeaderMenu from "../components/HeaderMenu.vue";
 </script>
 <template>
-  <div class="snap-start h-screen backdrop-blur-[2px] backdrop-brightness-200">
+  <div class="snap-end h-screen backdrop-blur-[2px] backdrop-brightness-200">
     <div class="max-w-7xl mx-auto items-center">
       <HeaderMenu />
     </div>
