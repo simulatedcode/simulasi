@@ -98,10 +98,8 @@ export default {
         </div>
       </div>
     </header>
-
-    <div class="py-8 bg-purple-100 h-screen">
-      <div class="max-w-7xl mx-auto px-5">
-        <h1 class="text-3xl font-bold">Recent posts</h1>
+    <div class="py-8 max-w-7xl mx-auto px-5">
+      <div class="max-w-lg">
         <div class="mt-8">
           <div class="posts">
             <div class="loading" v-if="loading">Loading...</div>

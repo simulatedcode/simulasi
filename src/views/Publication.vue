@@ -1,3 +1,4 @@
+<script></script>
 <template>
   <div class="h-screen backdrop-blur-md backdrop-brightness-200">
     <header>
@@ -59,7 +60,7 @@
         </div>
       </div>
     </header>
-    <div class="py-8 bg-purple-100 h-screen">
+    <div class="py-8">
       <div class="max-w-7xl mx-auto px-5">
         <h1 class="text-3xl font-bold">Publishing</h1>
       </div>

@@ -58,9 +58,9 @@ export default {
 </script>
 
 <template>
-  <div class="h-screen backdrop-blur-md backdrop-brightness-200">
+  <div class="h-min-screen backdrop-blur-md backdrop-brightness-200">
     <header>
-      <div>
+      <div class="top-0">
         <div class="max-w-7xl mx-auto items-center px-5">
           <div class="grid grid-cols-6 md:gap-x-4 gap-y-6 py-12">
             <div class="col-span-4 lg:col-span-2 mr-20">
@@ -83,7 +83,7 @@ export default {
                   >
                 </li>
                 <li class="text-gray-600">
-                  <router-link to="/opensource" class="hover:text-purple-400">
+                  <router-link to="/opensources" class="hover:text-purple-400">
                     Opensource
                   </router-link>
                 </li>
@@ -119,8 +119,8 @@ export default {
       </div>
     </header>
 
-    <div class="py-8 bg-purple-100 h-screen px-5">
-      <div class="max-w-7xl mx-auto">
+    <div class="py-8 max-w-7xl mx-auto">
+      <div class="max-w-2xl">
         <div class="loading" v-if="loading">Loading...</div>
 
         <div v-if="error" class="error">
@@ -128,7 +128,7 @@ export default {
         </div>
 
         <article v-if="post" class="prose">
-          <h1 class="font-semibold prose-h1">{{ post.title }}</h1>
+          <h1 class="font-semibold text-3xl">{{ post.title }}</h1>
           <img v-if="post.image" :src="imageUrlFor(post.image).width(480)" />
 
           <h6 class="text-sm text-gray-600 mt-2 mb-6">

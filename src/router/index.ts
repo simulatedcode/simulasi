@@ -7,6 +7,9 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+      meta: {
+        reload: true,
+      },
     },
     {
       path: "/publication",
@@ -15,6 +18,9 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/Publication.vue"),
+      meta: {
+        reload: true,
+      },
     },
     {
       path: "/opensources",
@@ -23,11 +29,17 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/OpenSources.vue"),
+      meta: {
+        reload: true,
+      },
     },
     {
       path: "/opensources/:slug",
       name: "singlepost",
       component: () => import("../views/SinglePost.vue"),
+      meta: {
+        reload: true,
+      },
     },
   ],
 });

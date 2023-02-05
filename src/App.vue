@@ -2,7 +2,9 @@
 import { RouterView } from "vue-router";
 import Layer1 from "./components/Layer1.vue";
 import Layer2 from "./components/Layer2.vue";
+
 import Lenis from "@studio-freight/lenis";
+
 const lenis = new Lenis({
   duration: 1.2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
@@ -26,7 +28,11 @@ requestAnimationFrame(raf);
 </script>
 
 <template>
-  <Layer1 />
-  <Layer2 />
-  <RouterView />
+  <div class="snap-mandatory">
+    <div class="relative h-screen">
+      <Layer1 />
+    </div>
+    <div class="snap-start h-screen backdrop-blur-[2px]"><Layer2 /></div>
+  </div>
+  <div class="h-screen bg-white"><RouterView /></div>
 </template>
