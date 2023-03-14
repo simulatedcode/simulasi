@@ -56,6 +56,11 @@ import { RouterLink } from "vue-router";
                   >Zine</router-link
                 >
               </li>
+              <li class="text-gray-600">
+                <router-link to="/" class="hover:text-purple-400"
+                  >Upload</router-link
+                >
+              </li>
             </ul>
           </div>
         </div>

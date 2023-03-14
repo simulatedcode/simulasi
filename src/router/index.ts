@@ -41,6 +41,14 @@ const router = createRouter({
         reload: true,
       },
     },
+    {
+      path: "/zine",
+      name: "zine",
+      component: () => import("../views/ZinePages.vue"),
+      meta: {
+        reload: true,
+      },
+    },
   ],
 });
 
